@@ -15,7 +15,8 @@
 
 <div class="home">
     <div class="vue-logo-back">
-        <img src="../assets/icon.svg" width="100px" height="100px">
+       <!-- <img src="../../public/assets/logo.svg" width="100px" height="100px"> -->
+         <VueLogo class="logo" />
     </div>
     <div class="col-md-6 centeralign">
         <div class="card centeralign addmargin" style="width: 18rem;" v-for="template in templatelist" :key="template.id">
@@ -38,6 +39,7 @@
 // @ is an alias to /src
 import Display from '@/components/Display.vue'
 import axios from 'axios'
+import VueLogo from '../../public/assets/vue.svg';
 
 export default {
     name: 'templates',
@@ -59,7 +61,8 @@ export default {
         }
     },
     components: {
-        Display
+        Display,
+        VueLogo
     },
     methods: {
         setSelectedTemplate: function(name) {
@@ -72,3 +75,9 @@ export default {
 }
 
 </script>
+<style scoped>
+.logo {
+  width:100px;
+  height:100px;
+}
+</style>

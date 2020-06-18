@@ -15,7 +15,7 @@
 
 <div class="home">
     <div class="vue-logo-back">
-        <img src="../assets/icon.svg" width="100px" height="100px">
+        <VueLogo class="logo" />
     </div>
     <div class="card" v-if="templateDetails.id">
         <div class="card-header">
@@ -44,12 +44,14 @@
 // @ is an alias to /src
 import axios from 'axios'
 import { Editor, EditorContent } from 'tiptap'
+import VueLogo from '../../public/assets/vue.svg';
 
 export default {
     
     name: 'templatedetails',
     components: {
     EditorContent,
+    VueLogo
   },
     mounted() {
         axios({
@@ -79,3 +81,9 @@ export default {
 }
 
 </script>
+<style scoped>
+.logo {
+  width:100px;
+  height:100px;
+}
+</style>

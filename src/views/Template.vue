@@ -15,7 +15,6 @@
 
 <div class="home">
     <div class="vue-logo-back">
-       <!-- <img src="../../public/assets/logo.svg" width="100px" height="100px"> -->
          <VueLogo class="logo" />
     </div>
     <div class="col-md-6 centeralign">

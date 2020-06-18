@@ -8,7 +8,7 @@
 export default {
   name: 'display',
   props: {
-    selectedCustomer: String
+    selectedTemplate: String
   }
 }
 </script>

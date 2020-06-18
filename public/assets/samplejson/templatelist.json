@@ -1,0 +1,16 @@
+[{
+	"id": 1,
+	"name": "Template1",
+	"createdBy": "user1@test.com",
+	"createdDate": "17-06-2020"
+}, {
+	"id": 2,
+	"name": "Template2",
+	"createdBy": "user2@test.com",
+	"createdDate": "16-06-2020"
+}, {
+	"id": 3,
+	"name": "Template3",
+	"createdBy": "user3@test.com",
+	"createdDate": "16-06-2020"
+}]

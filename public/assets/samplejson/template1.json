@@ -1,0 +1,10 @@
+{
+	"id": 1,
+	"name": "Template1",
+	"createdBy": "user1@test.com",
+	"createdDate": "17-06-2020",
+	"heading": "heading 1",
+	"description": "Description 1",
+	"file": "file1"
+
+}

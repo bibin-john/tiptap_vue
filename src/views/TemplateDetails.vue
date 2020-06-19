@@ -4,19 +4,11 @@
     <div class="vue-logo-back">
         <VueLogo class="logo" />
     </div>
-    <div class="card" v-if="templateDetails.id">
-        <div class="card-header">
+    <div class="card-header">
             Template Details
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{templateDetails.name}}</h5>
-            <p class="card-text">Name : {{templateDetails.name}}</p>
-            <p class="card-text">Created By : {{templateDetails.createdBy}}</p>
-            <p class="card-text">Created Date : {{templateDetails.createdDate}}</p>
-            <p class="card-text">Heading : {{templateDetails.heading}}</p>
-            <p class="card-text">Description : {{templateDetails.description}}</p>
-            <p class="card-text">File : {{templateDetails.file}}</p>  
-               <div class="editor">
+    </div>
+
+  <div class="editor">
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
       <div class="menubar">
 
@@ -150,7 +142,16 @@
 
     <editor-content class="editor__content" :editor="editor" />
   </div>     
-            <a v-on:click="goToMainPage()" class="btn btn-dark"><span style="color:white">Go Back</span></a>
+      <div class="card" v-if="templateDetails.id">        
+        <div class="card-body">
+            <h5 class="card-title">{{templateDetails.name}}</h5>
+            <p class="card-text">Name : {{templateDetails.name}}</p>
+            <p class="card-text">Created By : {{templateDetails.createdBy}}</p>
+            <p class="card-text">Created Date : {{templateDetails.createdDate}}</p>
+            <p class="card-text">Heading : {{templateDetails.heading}}</p>
+            <p class="card-text">Description : {{templateDetails.description}}</p>
+            <p class="card-text">File : {{templateDetails.file}}</p>  
+            <a v-on:click="goToMainPage()" class="btn btn-dark"><span class="link-btn" >Go Back</span></a>
         </div>
     </div>
 
@@ -184,7 +185,7 @@ import {
   Underline,
   History,
 } from 'tiptap-extensions'
-import VueLogo from '../../public/assets/vue.svg';
+import VueLogo from '../../public/assets/images/logos/vue.svg';
 
 export default {
     
@@ -275,6 +276,14 @@ export default {
 
 .vue-logo-back {
     background-color: black;
+}
+.link-btn{
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 0.8rem;
+    overflow-x: auto;
 }
 
 </style>

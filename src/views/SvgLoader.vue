@@ -15,9 +15,9 @@
   </nav>
 </template>
 <script>
-import VueLogo from '../../public/assets/vue.svg';
-import SVGOLogo from '../../public/assets/svgo.svg';
-import WebpackLogo from '../../public/assets/webpack.svg';
+import VueLogo from '../../public/assets/images/logos/vue.svg';
+import SVGOLogo from '../../public/assets/images/logos/svgo.svg';
+import WebpackLogo from '../../public/assets/images/logos/webpack.svg';
 
 export default {
   name: 'Example',

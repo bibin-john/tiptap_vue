@@ -24,7 +24,7 @@
                 <p class="card-text">Created By : {{template.createdBy}}</p>
                 <p class="card-text">created Date : {{template.createdDate}}</p>
 
-                <a class="btn btn-dark" v-on:click="goToDetailsPage(template.id)"><span style="color:white">Click for more details</span></a>
+                <a class="btn btn-dark" v-on:click="goToDetailsPage(template.id)"><span class="link-btn" >Click for details</span></a>
             </div>
         </div>
     </div>
@@ -34,11 +34,15 @@
 </template>
 
 <script>
+//import '../../public/assets/sass/style.scss'
+import '../../public/assets/sass/main.scss'
+
+
 
 // @ is an alias to /src
 import Display from '@/components/Display.vue'
 import axios from 'axios'
-import VueLogo from '../../public/assets/vue.svg';
+import VueLogo from '../../public/assets/images/logos/vue.svg';
 
 export default {
     name: 'templates',
@@ -74,9 +78,17 @@ export default {
 }
 
 </script>
-<style scoped>
+<style scoped lang="scss" >
 .logo {
   width:100px;
   height:100px;
+}
+.link-btn{
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 0.8rem;
+    overflow-x: auto; 
 }
 </style>

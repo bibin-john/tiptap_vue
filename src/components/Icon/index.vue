@@ -1,13 +1,50 @@
 <template>
   <div class="icon" :class="[`icon--${name}`, `icon--${size}`, { 'has-align-fix': fixAlign }]">
-    <svg class="icon__svg">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="'#icon--' + name"></use>
-    </svg>
-  </div>
+      <IconBold v-if="name === 'bold'"/>
+      <IconItalic v-if="name === 'italic'"/>
+      <IconStrike v-if="name === 'strike'"/>
+      <IconUnderline v-if="name === 'underline'"/>
+      <IconCode v-if="name === 'code'"/>
+      <IconParagraph v-if="name === 'paragraph'"/>
+      <IconUl v-if="name === 'ul'"/>
+      <IconOl v-if="name === 'ol'"/> 
+      <IconQuote v-if="name === 'quote'"/>  
+      <IconHr v-if="name === 'hr'"/>
+      <IconUndo v-if="name === 'undo'"/>
+      <IconRedo v-if="name === 'redo'"/>    
+    </div>
 </template>
 
 <script>
+import IconBold from '../../../public/assets/images/icons/bold.svg';
+import IconItalic from '../../../public/assets/images/icons/italic.svg';
+import IconStrike from '../../../public/assets/images/icons/strike.svg';
+import IconUnderline from '../../../public/assets/images/icons/underline.svg';
+import IconCode from '../../../public/assets/images/icons/code.svg';
+import IconParagraph from '../../../public/assets/images/icons/paragraph.svg';
+import IconUl from '../../../public/assets/images/icons/ul.svg';
+import IconOl from '../../../public/assets/images/icons/ol.svg';
+import IconQuote from '../../../public/assets/images/icons/quote.svg';
+import IconHr from '../../../public/assets/images/icons/hr.svg';
+import IconUndo from '../../../public/assets/images/icons/undo.svg';
+import IconRedo from '../../../public/assets/images/icons/redo.svg';
+
 export default {
+    name: 'Icon',
+    components: {
+     IconBold,
+     IconItalic,
+     IconStrike,
+     IconUnderline,
+     IconCode,
+     IconParagraph,
+     IconUl,
+     IconOl,
+     IconQuote,
+     IconHr,
+     IconUndo,
+     IconRedo,
+    },
   props: {
     name: {},
     size: {

@@ -164,7 +164,7 @@
 
 // @ is an alias to /src
 import axios from 'axios'
-import Icon from '../components/Icon'
+import Icon from '../components/Icon/'
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
 import {
   Blockquote,
